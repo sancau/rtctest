@@ -28,7 +28,11 @@ html(lang='ru')
       .row
         .col-lg-8.col-lg-offset-2(style="background-color: #555; border-radius: 10px; margin-top: 20px; padding-bottom:20px;")
           br
-          br
-          img(src='../images/sert.jpg', style='max-width: 700px; max-height: 700px; border-radius:20px;')
+          .row
+            .col-xs-11
+              img(src='../images/sert.jpg', style='max-width: 700px; max-height: 700px; border-radius:20px;')
+            .col-xs-1
+              a(href="javascript:history.back()").pull-right
+                img(src='../images/close.svg', style='width: 25px; height: 20px;')
           hr
           a(href='/', style='color: #aaa;') Испытательный центр ЦНИИ РТК, Санкт-Петербург, Тихорецкий пр. 21, тел: (812) 552-47-00
