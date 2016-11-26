@@ -15,8 +15,8 @@ if (!port) {
 var data = fs.readFileSync(__dirname + '/assets/data.json', 'utf-8');
 var systems = JSON.parse(data);
 
-const CLIMATIC = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24];
-const MECHANIC = [16, 17, 18, 19, 20, 21, 22, 23];
+const CLIMATIC = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 23];
+const MECHANIC = [16, 17, 18, 19, 20, 21, 22];
 const VACUUM = [13, 14, 15];
 
 var mechanicSystems =
@@ -49,9 +49,14 @@ app.get('/', function(req, res) {
 
 app.get('/systems/:id', function(req, res) {
   let system = systems.filter((s) => s.code === req.params.id)[0];
-  res.render('system', {
-    system: system
-  });
+  if (system != null) {
+    res.render('system', {
+      system: system
+    });
+  }
+  else {
+    res.status(404).send('Такой страницы не существует');
+  }
 });
 
 app.get('/sertificate', function(req, res) {

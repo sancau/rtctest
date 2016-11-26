@@ -108,9 +108,14 @@ html(lang='ru')
     // System view
     mixin system(s)
       a(href='/systems/' + s.code)
-        h5= s.name
-      p(style="font-size: 14px; font-wieght: normal; color: #aaa;")= s.manufacturer
-      p(style="font-size: 14px; font-wieght: normal; color: #bbb;")!= s.details
+        div.system-list-item.row
+          .col-xs-10
+            h5= s.name
+            p(style="font-size: 14px; font-wieght: normal; color: #aaa;") Изготовитель: #{s.manufacturer}
+            p(style="font-size: 14px; font-wieght: normal; color: #bbb;")!= s.details
+          .col-xs-2
+            img(src='../images/' + s.code + '.jpg', style='max-width: 100px; border-radius:10px;')
+
 
     //////////////////////////////////////////////////////////////////////////////////////////
     // Climatic Section

@@ -44,10 +44,11 @@ a {
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
+
 a:hover,
 a:focus {
   text-decoration: none;
-  color: #aaa;
+  color: #dedede;
 }
 .sert {
   color: #52bf90 !important;
@@ -320,4 +321,23 @@ body {
 
 .content-section {
   text-align: justify;
+}
+
+/***************************************************************/
+.system-list-item h5, p {
+  margin-bottom: 5px;
+}
+
+div .system-list-item {
+  padding-top: 10px;
+  margin-top: 30px;
+}
+
+div .system-list-item:hover {
+  border-left: 4px solid #dedede;
+  border-radius: 5px;
+}
+
+div .system-list-item {
+  border-left: 4px solid #3366CC;
 }

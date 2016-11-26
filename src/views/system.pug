@@ -29,12 +29,17 @@ html(lang='ru')
         .col-lg-8.col-lg-offset-2(style="background-color: #555; border-radius: 10px; margin-top: 20px; padding-bottom:20px;")
           br
           br
-          h3= system.name
+          .row
+            .col-xs-11
+              h3= system.name
+            .col-xs-1
+              a(href="javascript:history.back()").pull-right
+                img(src='../images/close.svg', style='width: 25px; height: 20px;')
           hr
-          p= system.manufacturer
+          p Изготовитель: #{system.manufacturer}
           p!= system.details
           hr
 
           img(src='../images/' + system.code + '.jpg', style='max-width: 700px; max-height: 400px; border-radius:20px;')
           hr
-          a(href='/', style='color: #aaa;') Испытательный центр ЦНИИ РТК, Санкт-Петербург, Тихорецкий пр. 21, тел: (812) 552-47-00
+          a(href='/', style='color: #aaa;') Испытательный центр ЦНИИ РТК, СПб, Тихорецкий пр. 21, тел: (812) 552-47-00, эл. почта: 73@rtc.ru
