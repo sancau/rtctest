@@ -12,7 +12,7 @@ if (!port) {
 // DATA
 ///////////////////////////////////////////////////////////////////////////////
 
-var data = fs.readFileSync(__dirname + '/assets/data.json', 'utf-8');
+var data = fs.readFileSync('/home/rtctest/rtctest/src' + '/assets/data.json', 'utf-8');
 var systems = JSON.parse(data);
 
 const CLIMATIC = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 23];
@@ -35,9 +35,9 @@ var climaticSystems =
 
 var app = express();
 
-app.set('views', './views');
+app.set('views', '/home/rtctest/rtctest/src/views');
 app.set('view engine', 'pug');
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('/home/rtctest/rtctest/src' + '/public'));
 
 app.get('/', function(req, res) {
   res.render('index', {
